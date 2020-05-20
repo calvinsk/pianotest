@@ -6,8 +6,8 @@ load dependency
 "piano": "file:../pxt-piano"  
 */
 
-//% color="#F1C40F" weight=20 icon="\uf001"
-namespace piano_keypad {
+//% color="#2131CB" weight=20 icon="\uf001"
+namespace Ekits_piano {
 
   
     let Strip: neopixel.Strip;
@@ -107,10 +107,10 @@ namespace piano_keypad {
      * @param index
      */
     
-    //% blockId=piano_RGB_Program block="RGB_Program"
+    //% blockId=piano_RGB_Program block="Turn On RGB"
     //% weight=99
     //% blockGap=10
-    //% color="#17ecc1"
+    //% color="#2131CB"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function RGB_Program(): neopixel.Strip {
          
@@ -120,10 +120,10 @@ namespace piano_keypad {
         return Strip;  
     }  
        
-    //% blockId=piano_RGB_Program_Close block="RGB_Program_Close"
+    //% blockId=piano_RGB_Program_Close block="Turn Off RGB"
     //% weight=98
     //% blockGap=10
-    //% color="#17ecc1"
+    //% color="#2131CB"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=12
     export function RGB_Program_Close(): void {
         pins.digitalWritePin(DigitalPin.P1, 0);
@@ -131,10 +131,10 @@ namespace piano_keypad {
         piano_keypad.RGB_Program().show();
     }
     
-    //% blockId=piano_Musicbeat block="Musicbeat|%index"
+    //% blockId=piano_Musicbeat block="Music melody|%index"
     //% weight=98
     //% blockGap=10
-    //% color="#17ecc1"
+    //% color="#2131CB"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function Musicbeat(index: musictone): void {
         switch (index) {
@@ -164,7 +164,7 @@ namespace piano_keypad {
     //% blockId=piano_Touch block="Music Touch return"
     //% weight=97
     //% blockGap=10
-    //% color="#17ecc1"
+    //% color="#2131CB"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=6
     export function Touch(): number {
         let a = 0;
@@ -177,10 +177,10 @@ namespace piano_keypad {
         return c;
     }
     
-    //% blockId=piano_TouchButton block="Music Button|%value"
+    //% blockId=piano_TouchButton block="Music Note|%value"
     //% weight=96
     //% blockGap=10
-    //% color="#17ecc1"
+    //% color="#2131CB"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=6
     export function TouchButton(value: note): number {
        
@@ -191,7 +191,7 @@ namespace piano_keypad {
     //% blockId=piano_PlayPiano block="Play Piano|tone %value"
     //% weight=95
     //% blockGap=10
-    //% color="#17ecc1"
+    //% color="#2131CB"
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=6
     export function PlayPiano(value: number): void {
         let a = 0;
